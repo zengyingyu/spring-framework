@@ -121,7 +121,7 @@ public final class BridgeMethodResolver {
 			if (isBridgeMethodFor(bridgeMethod, candidateMethod, bridgeMethod.getDeclaringClass())) {
 				return candidateMethod;
 			}
-			else if (previousMethod != null) {
+			else if (previousMethod != null) {//重写父类方法
 				sameSig = sameSig &&
 						Arrays.equals(candidateMethod.getGenericParameterTypes(), previousMethod.getGenericParameterTypes());
 			}
